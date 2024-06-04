@@ -1,0 +1,9 @@
+.\objects\slcd.o: slcd.c
+.\objects\slcd.o: .\RTE\Device\MKL46Z256VLL4\MKL46Z4.h
+.\objects\slcd.o: C:\Users\PHUOC\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm0plus.h
+.\objects\slcd.o: C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+.\objects\slcd.o: C:\Users\PHUOC\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\slcd.o: C:\Users\PHUOC\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\slcd.o: C:\Users\PHUOC\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h
+.\objects\slcd.o: .\RTE\Device\MKL46Z256VLL4\system_MKL46Z4.h
+.\objects\slcd.o: slcd.h
