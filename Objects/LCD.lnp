@@ -3,7 +3,6 @@
 ".\objects\main.o"
 ".\objects\i2c.o"
 ".\objects\mag.o"
-".\objects\led.o"
 ".\objects\board.o"
 ".\objects\clock_config.o"
 ".\objects\peripherals.o"

@@ -21,13 +21,19 @@ Target DLL:      PEMicro\Pemicro_ArmCortexInterface.dll V1.3.0.0
 Dialog DLL:      TARMCM1.DLL V1.14.6.0
  
 <h2>Project:</h2>
-C:\Hoc\code\LCD\LCD.uvprojx
-Project File Date:  06/04/2024
+C:\Hoc\code\ecompass\FRDM-KL46Z-E-compass\LCD.uvprojx
+Project File Date:  06/05/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin'
 Rebuild target 'Target 1'
 compiling peripherals.c...
+compiling slcd.c...
+slcd.h(54): warning:  #1-D: last line of file ends without a newline
+  #endif
+slcd.c(291): warning:  #1-D: last line of file ends without a newline
+  }                                                                                                                         
+slcd.c: 2 warnings, 0 errors
 compiling mag.c...
 i2c.h(12): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -52,7 +58,10 @@ mag.c(92): warning:  #177-D: variable "TEMP_ANGLE1"  was declared but never refe
 mag.c(92): warning:  #177-D: variable "TEMP_ANGLE"  was declared but never referenced
   	int loop_count = 0;float TEMP_ANGLE1;short int TEMP_ANGLE;
 mag.c: 11 warnings, 0 errors
-compiling board.c...
+compiling fsl_ftfx_cache.c...
+C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_ftfx_controller.h(167): warning:  #66-D: enumeration value is out of "int" range
+      kFTFx_SecurityStateNotSecure = 0xc33cc33cU,       /*!< Flash is not secure.*/
+C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_ftfx_cache.c: 1 warning, 0 errors
 compiling clock_config.c...
 compiling i2c.c...
 i2c.h(12): warning:  #1-D: last line of file ends without a newline
@@ -66,19 +75,6 @@ i2c.c(94): warning:  #550-D: variable "dummy_data"  was set but never used
 i2c.c(222): warning:  #1-D: last line of file ends without a newline
   }
 i2c.c: 5 warnings, 0 errors
-compiling slcd.c...
-slcd.h(54): warning:  #1-D: last line of file ends without a newline
-  #endif
-slcd.c(291): warning:  #1-D: last line of file ends without a newline
-  }                                                                                                                         
-slcd.c: 2 warnings, 0 errors
-compiling led.c...
-led.c(40): warning:  #111-D: statement is unreachable
-  	return 0;
-led.c(114): warning:  #1-D: last line of file ends without a newline
-  }
-led.c: 2 warnings, 0 errors
-compiling pin_mux.c...
 compiling main.c...
 slcd.h(54): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -92,41 +88,37 @@ mag.h(37): warning:  #1-D: last line of file ends without a newline
   #endif
 i2c.h(12): warning:  #1-D: last line of file ends without a newline
   #endif
-main.c(284): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *__restrict__"
+main.c(287): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *__restrict__"
               		snprintf(ucaryLCDMsg,5,"%4d",ANGLE);
-main.c(329): warning:  #1-D: last line of file ends without a newline
-  }
-main.c: 8 warnings, 0 errors
+main.c: 7 warnings, 0 errors
+compiling board.c...
 compiling fsl_common.c...
+compiling pin_mux.c...
 compiling fsl_clock.c...
-compiling fsl_ftfx_cache.c...
-C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_ftfx_controller.h(167): warning:  #66-D: enumeration value is out of "int" range
-      kFTFx_SecurityStateNotSecure = 0xc33cc33cU,       /*!< Flash is not secure.*/
-C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_ftfx_cache.c: 1 warning, 0 errors
 compiling fsl_ftfx_controller.c...
 C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_ftfx_controller.h(167): warning:  #66-D: enumeration value is out of "int" range
       kFTFx_SecurityStateNotSecure = 0xc33cc33cU,       /*!< Flash is not secure.*/
 C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_ftfx_controller.c: 1 warning, 0 errors
-compiling fsl_ftfx_flexnvm.c...
-C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_ftfx_controller.h(167): warning:  #66-D: enumeration value is out of "int" range
-      kFTFx_SecurityStateNotSecure = 0xc33cc33cU,       /*!< Flash is not secure.*/
-C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_ftfx_flexnvm.c: 1 warning, 0 errors
-compiling fsl_lpsci.c...
 compiling fsl_gpio.c...
-compiling fsl_smc.c...
-C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_ftfx_controller.h(167): warning:  #66-D: enumeration value is out of "int" range
-      kFTFx_SecurityStateNotSecure = 0xc33cc33cU,       /*!< Flash is not secure.*/
-C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_smc.c: 1 warning, 0 errors
-compiling fsl_debug_console.c...
-compiling fsl_i2c.c...
-compiling fsl_assert.c...
-compiling fsl_uart.c...
-compiling fsl_io.c...
 compiling fsl_ftfx_flash.c...
 C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_ftfx_controller.h(167): warning:  #66-D: enumeration value is out of "int" range
       kFTFx_SecurityStateNotSecure = 0xc33cc33cU,       /*!< Flash is not secure.*/
 C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_ftfx_flash.c: 1 warning, 0 errors
+compiling fsl_ftfx_flexnvm.c...
+C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_ftfx_controller.h(167): warning:  #66-D: enumeration value is out of "int" range
+      kFTFx_SecurityStateNotSecure = 0xc33cc33cU,       /*!< Flash is not secure.*/
+C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_ftfx_flexnvm.c: 1 warning, 0 errors
+compiling fsl_i2c.c...
+compiling fsl_lpsci.c...
 assembling startup_MKL46Z4.s...
+compiling fsl_smc.c...
+C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_ftfx_controller.h(167): warning:  #66-D: enumeration value is out of "int" range
+      kFTFx_SecurityStateNotSecure = 0xc33cc33cU,       /*!< Flash is not secure.*/
+C:/Users/PHUOC/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_smc.c: 1 warning, 0 errors
+compiling fsl_io.c...
+compiling fsl_assert.c...
+compiling fsl_debug_console.c...
+compiling fsl_uart.c...
 compiling fsl_log.c...
 compiling system_MKL46Z4.c...
 compiling fsl_str.c...
@@ -134,13 +126,9 @@ linking...
 .\Objects\LCD.axf: Warning: L6914W: option ro-base ignored when using --scatter.
 .\Objects\LCD.axf: Warning: L6914W: option rw-base ignored when using --scatter.
 .\Objects\LCD.axf: Warning: L6340W: options first and last are ignored for link type of scattered
-.\Objects\LCD.axf: Error: L6200E: Symbol __ARM_use_no_argv multiply defined (by led.o and main.o).
-.\Objects\LCD.axf: Error: L6200E: Symbol PORTC_PORTD_IRQHandler multiply defined (by led.o and main.o).
-.\Objects\LCD.axf: Error: L6200E: Symbol main multiply defined (by led.o and main.o).
-Not enough information to list image symbols.
-Not enough information to list load addresses in the image map.
-Finished: 2 information, 3 warning and 3 error messages.
-".\Objects\LCD.axf" - 3 Error(s), 36 Warning(s).
+Program Size: Code=13600 RO-data=1468 RW-data=168 ZI-data=2060  
+Finished: 0 information, 3 warning and 0 error messages.
+".\Objects\LCD.axf" - 0 Error(s), 33 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -189,40 +177,40 @@ Package Vendor: NXP
    * Component: ARM::CMSIS:CORE@5.6.0
 
    * Component: NXP::Board Support:SDK Project Template:project_template&frdmkl46z@1.0.0
-      Include file:  project_template/peripherals.h
       Source file:   project_template/peripherals.c
       Include file:  project_template/clock_config.h
-      Source file:   project_template/pin_mux.c
-      Source file:   project_template/board.c
       Include file:  project_template/board.h
-      Source file:   project_template/clock_config.c
+      Source file:   project_template/board.c
+      Include file:  project_template/peripherals.h
+      Source file:   project_template/pin_mux.c
       Include file:  project_template/pin_mux.h
+      Source file:   project_template/clock_config.c
 
    * Component: NXP::Device:SDK Drivers:clock@2.1.0
       Source file:   drivers/fsl_clock.c
       Include file:  drivers/fsl_clock.h
 
    * Component: NXP::Device:SDK Drivers:common@2.0.0
-      Source file:   drivers/fsl_common.c
       Include file:  drivers/fsl_common.h
+      Source file:   drivers/fsl_common.c
 
    * Component: NXP::Device:SDK Drivers:flash@3.0.0
-      Include file:  drivers/fsl_ftfx_utilities.h
+      Include file:  drivers/fsl_ftfx_adapter.h
+      Include file:  drivers/fsl_ftfx_flexnvm.h
       Source file:   drivers/fsl_ftfx_flexnvm.c
       Include file:  drivers/fsl_ftfx_features.h
-      Include file:  drivers/fsl_ftfx_flash.h
-      Source file:   drivers/fsl_ftfx_controller.c
-      Include file:  drivers/fsl_ftfx_controller.h
-      Include file:  drivers/fsl_ftfx_adapter.h
-      Include file:  drivers/fsl_flash.h
-      Include file:  drivers/fsl_ftfx_cache.h
-      Include file:  drivers/fsl_ftfx_flexnvm.h
-      Source file:   drivers/fsl_ftfx_flash.c
       Source file:   drivers/fsl_ftfx_cache.c
+      Source file:   drivers/fsl_ftfx_flash.c
+      Include file:  drivers/fsl_flash.h
+      Source file:   drivers/fsl_ftfx_controller.c
+      Include file:  drivers/fsl_ftfx_utilities.h
+      Include file:  drivers/fsl_ftfx_controller.h
+      Include file:  drivers/fsl_ftfx_cache.h
+      Include file:  drivers/fsl_ftfx_flash.h
 
    * Component: NXP::Device:SDK Drivers:gpio@2.2.1
-      Source file:   drivers/fsl_gpio.c
       Include file:  drivers/fsl_gpio.h
+      Source file:   drivers/fsl_gpio.c
 
    * Component: NXP::Device:SDK Drivers:i2c@2.0.5
       Source file:   drivers/fsl_i2c.c
@@ -240,31 +228,30 @@ Package Vendor: NXP
       Include file:  drivers/fsl_smc.h
 
    * Component: NXP::Device:SDK Drivers:uart@2.1.5
-      Source file:   drivers/fsl_uart.c
       Include file:  drivers/fsl_uart.h
+      Source file:   drivers/fsl_uart.c
 
    * Component: NXP::Device:SDK Utilities:assert@1.0.0
       Source file:   utilities/fsl_assert.c
 
    * Component: NXP::Device:SDK Utilities:debug_console@1.0.0
       Source file:   utilities/fsl_debug_console.c
+      Include file:  utilities/fsl_debug_console.h
       Include file:  utilities/fsl_debug_console_conf.h
+      Include file:  utilities/log/fsl_log.h
       Source file:   utilities/str/fsl_str.c
       Include file:  utilities/str/fsl_str.h
       Source file:   utilities/io/fsl_io.c
       Include file:  utilities/io/fsl_io.h
       Source file:   utilities/log/fsl_log.c
-      Include file:  utilities/log/fsl_log.h
-      Include file:  utilities/fsl_debug_console.h
 
    * Component: NXP::Device:Startup@1.0.0
-      Include file:  MKL46Z4.h
-      Include file:  MKL46Z4_features.h
-      Include file:  fsl_device_registers.h
-      Source file:   arm/startup_MKL46Z4.s
       Source file:   system_MKL46Z4.c
+      Include file:  MKL46Z4_features.h
       Include file:  system_MKL46Z4.h
-Target not created.
+      Source file:   arm/startup_MKL46Z4.s
+      Include file:  MKL46Z4.h
+      Include file:  fsl_device_registers.h
 Build Time Elapsed:  00:00:03
 </pre>
 </body>

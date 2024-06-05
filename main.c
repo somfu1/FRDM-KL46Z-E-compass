@@ -210,9 +210,12 @@ int main(void)
             	    /* Enable individual interrupt */
             	    NVIC_EnableIRQ(PORTC_PORTD_IRQn);
             	    NVIC_EnableIRQ(TPM0_IRQn);
-
             	    /* Enable global interrupt */
             	    __enable_irq();
+            	    /* Set interrupt priority */
+            	    NVIC_SetPriority(PORTC_PORTD_IRQn, 0); // Highest priority for switches
+            	    NVIC_SetPriority(TPM0_IRQn, 1); // Lower priority for timer
+
 	
 	//	PRINTF("Hello world!");
     while(1){
